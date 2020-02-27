@@ -1,89 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="site.css" />
-    <title>La Dame Du Plateau</title>
-    <description
-      >La Dame Du Plateau est une pièce de théâtre mise en scène par Pierre
-      Sanchis.</description
-    >
-  </head>
-  <body>
-    <header></header>
 
-    <div id="contenu">
-      <section>
-        <div id="select">
-          <button id="resumeButton" onclick="ChooseTab('resume')" class="btn">
-            Résumé
-          </button>
-          <button id="teamButton" onclick="ChooseTab('team')">
-            L'Équipe
-          </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="site.css" />
+  <title>La Dame Du Plateau</title>
+  <meta name="description" content="La Dame Du Plateau est une pièce de théâtre mise en scène par Pierre
+    Sanchis." />
+</head>
+
+<body>
+  <header>
+    <img src="images/affiche.png" alt="Affiche du spectacle" title="Affiche" />
+    <aside>
+      <h2>La Dame Du Plateau, présentée par la <strong>Calibri Compagnie</strong></h2>
+    </aside>
+  </header>
+
+  <div id="contenu">
+    <section>
+      <div id="select">
+        <span class="button buttonActive" id="resumeButton" onclick="ChooseTab('resume')" class="btn">
+          Résumé
+        </span>
+        <span class="button" id="teamButton" onclick="ChooseTab('team')">
+          L'Équipe
+        </span>
+      </div>
+      <div id="tabcontent">
+        <div id="resume" class="tab-active">
+          <h2>La Dame Du Plateau</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+            dolorem perspiciatis odio ipsa illum vitae non quos dicta
+            dignissimos, recusandae vero et a facilis voluptatum ad, dolore
+            voluptates porro blanditiis.
+          </p>
         </div>
-        <div id="tabcontent">
-          <div id="resume" class="tab-active">
-            <h2>La Dame Du Plateau</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
-              dolorem perspiciatis odio ipsa illum vitae non quos dicta
-              dignissimos, recusandae vero et a facilis voluptatum ad, dolore
-              voluptates porro blanditiis.
-            </p>
-          </div>
-          <div id="team" class="tab" hidden>
-            <table>
-              <tr>
-                <td>table 1</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-          </div>
+        <div id="team" class="tab" hidden>
+          <table>
+            <tr>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+              <td>
+                <img src="./images/comediens/anonyme.jpeg" alt="Un comédien anonyme" title="Un comédien anonyme" />
+                <h3>John Smith</h3>
+                <p><em>Etudiant troubadour</em></p>
+              </td>
+            </tr>
+          </table>
         </div>
-      </section>
+      </div>
+    </section>
+  </div>
 
-      <form action="#" id="mailForm" method="post">
-        <input type="text" name="Name" id="Name" onblur="Mail()" />
-        <input
-          type="submit"
-          id="submit"
-          value="Réservez votre place !"
-          disabled
-        />
-      </form>
-    </div>
+  <form action="#" id="mailForm" method="post">
+    <input type="text" name="Name" id="Name" onblur="Mail()" />
+    <input type="submit" id="submit" value="Réservez votre place !" disabled />
+  </form>
+  <footer>
+    Calibri Compagnie
+  </footer>
+</body>
 
-    <footer>
-      Calibri Compagnie
-    </footer>
-  </body>
 </html>
 
 <script>
@@ -102,8 +118,8 @@
   function ChooseTab(name) {
     var tab = document.getElementById(name);
     var activeTab = document.querySelectorAll(".tab-active");
-    console.log(activeTab);
-    console.log(tab);
+    var button = document.getElementById(`${name}Button`)
+    var activeButton = document.querySelector(".buttonActive")
     if (activeTab[0] != tab) {
       activeTab.forEach(actTab => {
         actTab.className = "tab";
@@ -111,6 +127,8 @@
       });
       tab.className = "tab-active";
       tab.hidden = false;
+      activeButton.className = "button"
+      button.className += " buttonActive"
     }
   }
 </script>

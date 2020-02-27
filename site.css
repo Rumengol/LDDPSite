@@ -1,0 +1,89 @@
+body {
+  margin: none;
+}
+
+#contenu {
+  margin: auto;
+  padding: 2em;
+  width: 70%;
+  background-color: black;
+  color: white;
+}
+
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-content: space-between;
+  position: relative;
+  border: 1px black solid;
+}
+
+header aside{
+  width: 10em;
+  border: 1px black solid
+}
+
+header img{
+  max-height: 9em;
+}
+
+#select {
+  background-color: white;
+  height: max-content;
+  margin-left: -2em;
+  margin-right: -2em;
+}
+
+#select .button {
+  margin-left:5%;
+  display:inline-block;
+  width:15%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+}
+
+#select .button:hover, .buttonActive {
+  background-color: black !important;
+  color: white !important;
+}
+
+#select .button:hover::before, #select .button:hover::after, .buttonActive::before, .buttonActive::after{
+  content:"";
+  position:absolute;
+}
+
+#select .button:hover::before, .buttonActive::before{
+  border-top: 3em solid transparent;
+  border-right: 15px solid black;
+  right:100%;
+}
+
+#select .button:hover::after, .buttonActive::after{
+  border-bottom: 3em solid transparent;
+  border-left: 15px solid black;
+  left:100%;
+}
+
+#team{
+  margin-top: 2em;
+}
+
+tr{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+td{
+  margin: 2em 1em;
+  text-align: center;
+  line-height: 1em;
+}
+
+td img{
+  max-width: 10em;
+  max-height: 20em;
+}
