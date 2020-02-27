@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="site.css" />
+    <title>La Dame Du Plateau</title>
+    <description
+      >La Dame Du Plateau est une pièce de théâtre mise en scène par Pierre
+      Sanchis.</description
+    >
+  </head>
+  <body>
+    <header></header>
+
+    <div id="contenu">
+      <section>
+        <div id="select">
+          <button id="resumeButton" onclick="ChooseTab('resume')" class="btn">
+            Résumé
+          </button>
+          <button id="teamButton" onclick="ChooseTab('team')">
+            L'Équipe
+          </button>
+        </div>
+        <div id="tabcontent">
+          <div id="resume" class="tab-active">
+            <h2>La Dame Du Plateau</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam
+              dolorem perspiciatis odio ipsa illum vitae non quos dicta
+              dignissimos, recusandae vero et a facilis voluptatum ad, dolore
+              voluptates porro blanditiis.
+            </p>
+          </div>
+          <div id="team" class="tab" hidden>
+            <table>
+              <tr>
+                <td>table 1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <form action="#" id="mailForm" method="post">
+        <input type="text" name="Name" id="Name" onblur="Mail()" />
+        <input
+          type="submit"
+          id="submit"
+          value="Réservez votre place !"
+          disabled
+        />
+      </form>
+    </div>
+
+    <footer>
+      Calibri Compagnie
+    </footer>
+  </body>
+</html>
+
+<script>
+  function Mail() {
+    var contenu = document.getElementById("Name").value;
+    console.log(contenu);
+    document.getElementById(
+      "mailForm"
+    ).action = `mailto:rumengol29@gmail.com?subject=Reservation&body='Réservation%20au%20nom%20de%20${contenu.replace(
+      " ",
+      "%20"
+    )}'`;
+    document.getElementById("submit").disabled = false;
+  }
+
+  function ChooseTab(name) {
+    var tab = document.getElementById(name);
+    var activeTab = document.querySelectorAll(".tab-active");
+    console.log(activeTab);
+    console.log(tab);
+    if (activeTab[0] != tab) {
+      activeTab.forEach(actTab => {
+        actTab.className = "tab";
+        actTab.hidden = true;
+      });
+      tab.className = "tab-active";
+      tab.hidden = false;
+    }
+  }
+</script>
