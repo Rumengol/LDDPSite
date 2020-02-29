@@ -1,5 +1,8 @@
+
 body {
-  margin: none;
+  margin: 0;
+  padding:0;
+  background: url("./images/bg-1.png");
 }
 
 #contenu {
@@ -10,22 +13,65 @@ body {
   color: white;
 }
 
+p{
+  text-align: justify;
+}
+
+#banner{
+  width:100%;
+  margin-bottom: 4em;
+  border-bottom: solid white 4px;
+  border-radius: 0 0 12px 12px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#banner img{
+  height: 10em;
+}
+
+#banner #logo{
+  width:10em;
+  border-bottom-left-radius: 5px;
+}
+
 header{
   display: flex;
   flex-direction: row;
-  align-items: stretch;
-  align-content: space-between;
-  position: relative;
-  border: 1px black solid;
+  justify-content: center;
+  margin:auto;
+  width:90%;
 }
 
+
 header aside{
-  width: 10em;
-  border: 1px black solid
+  width: 50%;
+  padding: 1em;
+  padding-right:3em;
+  text-align: justify;
+  color: aliceblue;
+  background: linear-gradient(to right, black 20%, grey);
+  border-radius: 0 20px 20px 0;
+  border: 1px solid black;
 }
 
 header img{
-  max-height: 9em;
+  max-height: 30em;
+  background-color: black;
+}
+
+.imgcontainer{
+  width:50%;
+  display:flex;
+  justify-content: center;
+  background-color: black;
+  border-radius: 20px 0 0 20px;
+}
+
+#contenu{
+  margin-top: 1em;
+  border-radius: 5px 5px 0 0;
 }
 
 #select {
@@ -86,4 +132,69 @@ td{
 td img{
   max-width: 10em;
   max-height: 20em;
+}
+
+#Name{
+  border:0;
+  background: none;
+  display:block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid white;
+  padding: 14px 10px;
+  width:280px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  font-size:  1.25em;
+  transition: .25s;
+}
+
+#Name:focus{
+  width:380px;
+  border-color: black;
+}
+
+#submit{
+  border:0;
+  background: none;
+  display:block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid white;
+  padding: 14px 30px;
+  width:200px;
+  outline:none;
+  color: white;
+  border-radius: 24px;
+  transition: .25s;
+  cursor: pointer;
+}
+
+#submit:hover{
+  background: white;
+  color: black;
+}
+
+#submit:active{
+  color: white;
+  background: black;
+}
+
+#mailForm{
+  margin-bottom:5em;
+}
+
+footer{
+  border-top: 10px solid black;
+  background: #2d3436;
+  color:aliceblue;
+  padding:none;
+  width: 100%;
+  height:75px;
+  box-sizing: border-box;
+}
+
+footer p{
+  text-align: center;
 }
