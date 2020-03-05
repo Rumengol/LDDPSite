@@ -17,6 +17,10 @@ p{
   text-align: justify;
 }
 
+a{
+  text-decoration: none;
+}
+
 #banner{
   width:100%;
   margin-bottom: 4em;
@@ -81,6 +85,8 @@ header img{
   margin-right: -2em;
 }
 
+
+
 #select .button {
   margin-left:5%;
   display:inline-block;
@@ -90,6 +96,7 @@ header img{
   text-align: center;
   line-height: 3em;
   position: relative;
+  cursor:pointer;
 }
 
 #select .button:hover, .buttonActive {

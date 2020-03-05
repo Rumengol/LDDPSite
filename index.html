@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -29,6 +29,7 @@
       </p>
     </aside>
   </header>
+  <a id="submit" target="blank" href="https://calibricompagnie.s2.yapla.com/fr/event-13633">Réservez votre place !</a>
 
   <div id="contenu">
     <section>
@@ -114,12 +115,6 @@
       </div>
     </section>
   </div>
-
-  <form action="#" id="mailForm" method="post">
-    <input type="text" name="Name" id="Name" placeholder="Inscrivez votre nom" onblur="Mail()" />
-    <input type="submit" id="submit" value="Réservez votre place !" disabled />
-  </form>
-
   <footer>
     <p>Calibri Compagnie 2020 - Tous Droits Réservés</p>
   </footer>
@@ -127,19 +122,7 @@
 </body>
 
 </html>
-
 <script>
-  function Mail() {
-    var contenu = document.getElementById("Name").value;
-    console.log(contenu);
-    document.getElementById(
-      "mailForm"
-    ).action = `mailto:rumengol29@gmail.com?subject=Reservation&body='Réservation%20au%20nom%20de%20${contenu.replace(
-      " ",
-      "%20"
-    )}'`;
-    document.getElementById("submit").disabled = false;
-  }
 
   function ChooseTab(name) {
     var tab = document.getElementById(name);
