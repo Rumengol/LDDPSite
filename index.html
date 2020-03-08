@@ -6,43 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="site.css" />
-  <title>La Dame Du Plateau</title>
-  <meta name="description" content="La Dame Du Plateau est une pièce de théâtre mise en scène par Pierre
-    Sanchis." />
+  <title>La Dame Du Plateau - Calibri Compagnie</title>
+  <meta name="description" content="La Dame Du Plateau, pièce de théâtre tragique et légèrement futuriste, 
+  est mise en scène par Pierre Sanchis et présentée par la Calibri Compagnie." />
   <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
 </head>
 
 <body>
-  <div id="banner">
-    <img src="images/logo.png" id="logo" />
-    <img src="images/Banner.png" />
-    <div></div>
-  </div>
   <header>
-    <div class="imgcontainer">
-      <img src="images/Flyer.png" alt="Affiche du spectacle" title="Affiche" />
+    <div id="banner">
+      <img src="images/logo.png" id="logo" />
+      <img src="images/Banner.png" />
+      <div></div>
     </div>
-    <aside>
-      <h2>La Dame Du Plateau, présentée par la <strong>Calibri Compagnie</strong></h2>
-      <p>
-        [Présentation rapide de la pièce (et de la troupe peut être)]
-      </p>
-    </aside>
+    <nav id="select">
+      <ul>
+        <li class="button buttonActive" id="homeButton" onclick="ChooseTab('home')">
+          Accueil
+        </li>
+        <li class="button" id="resumeButton" onclick="ChooseTab('resume')">
+          Résumé
+        </li>
+        <li class="button" id="teamButton" onclick="ChooseTab('team')">
+          L'Équipe
+        </li>
+        <li class="button" id="contactButton" onclick="ChooseTab('contact')">
+          Contact
+        </li>
+      </ul>
+    </nav>
   </header>
   <a id="submit" target="blank" href="https://calibricompagnie.s2.yapla.com/fr/event-13633">Réservez votre place !</a>
 
   <div id="contenu">
     <section>
-      <div id="select">
-        <span class="button buttonActive" id="resumeButton" onclick="ChooseTab('resume')" class="btn">
-          Résumé
-        </span>
-        <span class="button" id="teamButton" onclick="ChooseTab('team')">
-          L'Équipe
-        </span>
-      </div>
       <div id="tabcontent">
-        <div id="resume" class="tab-active">
+        <div id="home" class="tab tab-active">
+          <div id="flexcontainer">
+            <div class="imgcontainer">
+              <img src="images/Flyer.png" alt="Affiche du spectacle" title="Affiche" />
+            </div>
+            <aside>
+              <h2>La Dame Du Plateau, présentée par la <strong>Calibri Compagnie</strong></h2>
+              <p>
+                Dans une ère de révolution industrielle où la technologie s'est développée très vite, Henri souhaite
+                s'acheter
+                un humanoïde, une créature façonnée de toute pièce destinée à faire les tâches ménagères. Mais son ami
+                Bernard
+                n'est pas du même avis, surtout lorsque Henri décide de façonner le visage de celle-ci avec les traits
+                d'une
+                amie lointaine qui semble avoir vécu quelque chose que seul nos deux hommes connaissent. Mais que
+                cachent
+                les
+                deux protagonistes ? Pourquoi l'humanoïde ravive-t-elle autant de souvenirs ?
+              </p>
+            </aside>
+          </div>
+
+        </div>
+        <div id="resume" class="tab" hidden>
           <h2>La Dame Du Plateau</h2>
           <p>
             [Résumé de la pièce]
@@ -111,6 +133,10 @@
               </td>
             </tr>
           </table>
+        </div>
+        <div id="contact" class="tab" hidden>
+          <h2>Nous Contacter :</h2>
+          <p>Nous envoyer un mail : <a href="mailto:calibricompagnie11@gmail.com">calibricompagnie11@gmail.com</a></p>
         </div>
       </div>
     </section>
